@@ -35,11 +35,6 @@
     "p_adls_filename" : "AdventureWorks_Sales_2015.csv"
   },
   {
-    "p_relative_url" : "sktarab4/Adventure-Works-Data-Engineering-Project/refs/heads/main/data/AdventureWorks_Sales_2015.csv",
-    "p_adls_folder" : "AdventureWorks_Sales_2015",
-    "p_adls_filename" : "AdventureWorks_Sales_2015.csv"
-  },
-  {
     "p_relative_url" : "sktarab4/Adventure-Works-Data-Engineering-Project/refs/heads/main/data/AdventureWorks_Sales_2016.csv",
     "p_adls_folder" : "AdventureWorks_Sales_2016",
     "p_adls_filename" : "AdventureWorks_Sales_2016.csv"
