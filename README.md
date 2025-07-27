@@ -4,7 +4,7 @@ This project implements a modern data lakehouse on Azure, ingesting data via **D
 
 ## High-Level Overview
 
-This is an end-to-end data pipeline using Microsoft Azure services with a lakehouse approach. Data from Kaggle's Adventure Works dataset is uploaded to GitHub, then ingested into Azure Data Lake Storage Gen2 using Azure Data Factory and transformed using Azure Databricks. The transformed data is then made queryable via Azure Synapse Analytics, and finally visualized using Power BI.
+This is an end-to-end data pipeline using **Microsoft Azure** services with a lakehouse approach. Data from Kaggle's Adventure Works dataset is uploaded to **GitHub**, then ingested into **Azure Data Lake Storage Gen2** using **Azure Data Factory** and transformed using **Azure Databricks**. The transformed data is then made queryable via **Azure Synapse Analytics**, and finally visualized using **Power BI**.
 
 The architecture follows a **medallion architecture** with three layers:
 
@@ -27,8 +27,8 @@ The architecture follows a **medallion architecture** with three layers:
 
 * Created a pipeline in Azure Data Factory using the HTTP connector.
 * Created a [git.json](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/git.json) file to store paramete values for multiple file names and URLs.
-* Used parameterized pipelines to dynamically loop through the git.json file using lookup & foreach functions in ADF.
-* Data was fetched from GitHub and stored in ADLS Gen2.
+* Used parameterized pipelines to dynamically loop through the [git.json](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/git.json) file using lookup & foreach functions in ADF.
+* Data was fetched using Copy activity from GitHub and stored in ADLS Gen2.
 * Each file landed in its dedicated subfolder under the ```/bronze/``` layer (folder in ADLS Gen2) (raw zone).
 
 ### 3: Raw Storage – Bronze Layer
