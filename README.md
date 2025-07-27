@@ -29,6 +29,8 @@ The architecture follows a **medallion architecture** with three layers:
 * Data was fetched using Copy activity from GitHub and stored in ADLS Gen2.
 * Each file landed in its dedicated subfolder under the ```/bronze/``` layer (folder in ADLS Gen2) (raw zone).
 
+![](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/ADF.png)
+
 ### 3: Raw Storage – Bronze Layer
 
 * Organized the ADLS Gen2 structure as:
