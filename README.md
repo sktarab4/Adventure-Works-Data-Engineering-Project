@@ -6,9 +6,9 @@ This is an end-to-end data pipeline using **Microsoft Azure** services with a la
 
 The architecture follows a **medallion architecture** with three layers:
 
-* Bronze: Raw, ingested data
-* Silver: Cleaned and transformed data
-* Gold: Analytical/aggregated data for reporting
+* **Bronze**: Raw, ingested data
+* **Silver**: Cleaned and transformed data
+* **Gold**: Analytical/aggregated data for reporting
 
 ## Architecture
 
