@@ -12,5 +12,9 @@ The architecture follows a medallion architecture with three layers:
 * Silver: Cleaned and transformed data
 * Gold: Analytical/aggregated data for reporting
 
+### Architecture
+
+!(https://github.com/sktarab4/Adventure-Works-Data-Engineering-Project/blob/main/ADW%20-%20Architecture%20Diagram.png)
+
 
 
