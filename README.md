@@ -35,10 +35,10 @@ The architecture follows a **medallion architecture** with three layers:
 
 * Organized the ADLS Gen2 structure as:
 ```
-_/bronze/
+/bronze/
     ├── customers/
     ├── products/
-    └── sales/_
+    └── sales/
 ```    
 * No transformations were done in this layer, it was purely for storing ingested raw files.
 
@@ -64,10 +64,10 @@ spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account>.dfs.co
     - Join operations and basic aggregations
 * Wrote the clean data to the ```/silver/``` layer (folder in ADLS Gen2) in Parquet format:
 ```
-_/silver/
+/silver/
     ├── customers_cleaned/
     ├── products_enriched/
-    └── sales_transformed/_
+    └── sales_transformed/
 ```
 
 ### 6: Analytics Layer with Azure Synapse SQL Serverless
