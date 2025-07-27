@@ -18,8 +18,28 @@ The architecture follows a medallion architecture with three layers:
 
 ### Implementation Steps
 
-## 1: Dataset Preparation
+### 1: Dataset Preparation
 
 * Downloaded Adventure Works dataset from Kaggle.
-* Uploaded the cleaned CSV files to a public GitHub repository to simulate a hosted so
+* Uploaded the cleaned CSV files to a public GitHub repository to simulate a hosted source.
+
+### 2: Data Ingestion with Azure Data Factory
+
+* Created a pipeline in Azure Data Factory using the HTTP connector.
+* Used parameterized pipelines to dynamically loop through multiple file names and URLs.
+* Data was fetched from GitHub and stored in ADLS Gen2.
+* Each file landed in its dedicated subfolder under the /bronze/ zone (raw zone).
+
+### 3: Raw Storage – Bronze Layer
+
+* Organized the ADLS Gen2 structure as:
+
+/bronze/
+    ├── customers/
+    ├── products/
+    └── sales/
+    
+* No transformations were done in this layer — purely for storing ingested raw files.
+
+
 
