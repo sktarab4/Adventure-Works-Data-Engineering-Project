@@ -14,7 +14,7 @@ The architecture follows a **medallion architecture** with three layers:
 
 ## Architecture
 
-![]()
+![](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/ADW%20-%20Architecture%20Diagram.png)
 
 ## Implementation Steps
 
