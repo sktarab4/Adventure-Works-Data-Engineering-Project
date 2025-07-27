@@ -24,7 +24,7 @@ The architecture follows a **medallion architecture** with three layers:
 ### 2: Data Ingestion with Azure Data Factory
 
 * Created a pipeline in Azure Data Factory using the HTTP connector.
-* Created a [git.json](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/git.json) file to store paramete values for multiple file names and URLs.
+* Created a [git.json](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/git.json) file to store parameter values for multiple file names and file paths in ADLS Gen2.
 * Used parameterized pipelines to dynamically loop through the [git.json](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/git.json) file using lookup & foreach functions in ADF.
 * Data was fetched using Copy activity from GitHub and stored in ADLS Gen2.
 * Each file landed in its dedicated subfolder under the ```/bronze/``` layer (folder in ADLS Gen2) (raw zone).
