@@ -1,7 +1,5 @@
 # adventure-works-end-to-end-pipeline
 
-This project implements a modern data lakehouse on Azure, ingesting data via **Data Factory**, storing it in **Azure Data Lake Storage Gen2**, transforming it with **Databricks**, querying it using **Synapse**, and visualizing insights in **Power BI**. It demonstrates a scalable, end-to-end pipeline for efficient data processing and analytics.
-
 ## High-Level Overview
 
 This is an end-to-end data pipeline using **Microsoft Azure** services with a lakehouse approach. Data from Kaggle's Adventure Works dataset is uploaded to **GitHub**, then ingested into **Azure Data Lake Storage Gen2** using **Azure Data Factory** and transformed using **Azure Databricks**. The transformed data is then made queryable via **Azure Synapse Analytics**, and finally visualized using **Power BI**.
