@@ -21,7 +21,7 @@ The architecture follows a medallion architecture with three layers:
 ### 1: Dataset Preparation
 
 * Downloaded Adventure Works dataset from [Kaggle](https://www.kaggle.com/datasets/ukveteran/adventure-works).
-* Uploaded the cleaned CSV files to a public GitHub repository to simulate a hosted source.
+* Uploaded the cleaned CSV files to a public [GitHub](https://github.com/sktarab4/Adventure-Works-Data-Engineering-Project/tree/main/data) repository to simulate a hosted source.
 
 ### 2: Data Ingestion with Azure Data Factory
 
