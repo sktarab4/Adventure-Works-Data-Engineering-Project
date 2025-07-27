@@ -33,12 +33,12 @@ The architecture follows a medallion architecture with three layers:
 ### 3: Raw Storage – Bronze Layer
 
 * Organized the ADLS Gen2 structure as:
-
+```
 /bronze/
     ├── customers/
     ├── products/
     └── sales/
-    
+```    
 * No transformations were done in this layer — purely for storing ingested raw files.
 
 
