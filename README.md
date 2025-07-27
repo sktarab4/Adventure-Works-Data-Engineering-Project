@@ -39,7 +39,35 @@ The architecture follows a medallion architecture with three layers:
     ├── products/
     └── sales/
 ```    
-* No transformations were done in this layer — purely for storing ingested raw files.
+* No transformations were done in this layer, it was purely for storing ingested raw files.
 
+### 4: Secure Access via Service Principal
+
+* Registered an Azure Active Directory (Service Principal App) for secure access.
+* Created a secret in Azure Key Vault.
+* Granted the Databricks workspace access to the Key Vault using linked services.
+* Used ```spark.conf.set``` to set the below in the Databricks Notebook:
+```
+spark.conf.set("fs.azure.account.auth.type.<storage-account>.dfs.core.windows.net", "OAuth")
+spark.conf.set("fs.azure.account.oauth.provider.type.<storage-account>.dfs.core.windows.net", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
+spark.conf.set("fs.azure.account.oauth2.client.id.<storage-account>.dfs.core.windows.net", "<application-id>")
+spark.conf.set("fs.azure.account.oauth2.client.secret.<storage-account>.dfs.core.windows.net", service_credential)
+spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account>.dfs.core.windows.net", "https://login.microsoftonline.com/<directory-id>/oauth2/token")
+```
+
+### 5: Data Transformation in Azure Databricks
+
+* Read raw data from the ```/bronze/``` zone using PySpark.
+* Applied:
+    - Schema enforcement
+    - Null checks and data type conversions
+    - Join operations and basic aggregations
+* Wrote the clean data to the ```/silver/``` zone in Parquet format:
+```
+/silver/
+    ├── customers_cleaned/
+    ├── products_enriched/
+    └── sales_transformed/
+```
 
 
