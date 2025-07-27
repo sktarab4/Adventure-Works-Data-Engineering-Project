@@ -4,7 +4,7 @@ This project showcases an end-to-end data pipeline built entirely on Azure. Data
 
 ### High-Level Overview
 
-This project implements an end-to-end data pipeline using Microsoft Azure services with a lakehouse approach. Data from Kaggle's Adventure Works dataset is uploaded to GitHub, then ingested into Azure Data Lake Storage Gen2 using Azure Data Factory and transformed using Azure Databricks. The transformed data is then made queryable via Azure Synapse Analytics, and finally visualized using Power BI.
+This is an end-to-end data pipeline using Microsoft Azure services with a lakehouse approach. Data from Kaggle's Adventure Works dataset is uploaded to GitHub, then ingested into Azure Data Lake Storage Gen2 using Azure Data Factory and transformed using Azure Databricks. The transformed data is then made queryable via Azure Synapse Analytics, and finally visualized using Power BI.
 
 The architecture follows a medallion architecture with three layers:
 
