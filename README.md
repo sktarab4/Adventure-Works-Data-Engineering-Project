@@ -14,7 +14,7 @@ The architecture follows a medallion architecture with three layers:
 
 ### Architecture
 
-!(https://github.com/sktarab4/Adventure-Works-Data-Engineering-Project/blob/main/ADW%20-%20Architecture%20Diagram.png)
+![](/main/ADW%20-%20Architecture%20Diagram.png)
 
 
 
