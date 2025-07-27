@@ -1,4 +1,4 @@
-# adventure-works-azure-pipeline
+# adventure-works-end-to-end-pipeline
 
 This project implements a modern data lakehouse on Azure, ingesting data via Data Factory, storing it in ADLS Gen2, transforming it with Databricks, querying it using Synapse, and visualizing insights in Power BI. It demonstrates a scalable, end-to-end pipeline for efficient data processing and analytics.
 
