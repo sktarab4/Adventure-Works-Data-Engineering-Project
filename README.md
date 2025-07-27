@@ -57,7 +57,7 @@ spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account>.dfs.co
 
 ### 5: Data Transformation in Azure Databricks
 
-* Read raw data from the ```/bronze/``` layer (folder in ADLS Gen2) using PySpark.
+* Read raw data from the ```/bronze/``` layer (folder in ADLS Gen2) using PySpark in [Databricks Notebook](https://github.com/sktarab4/adventure-works-azure-pipeline/blob/main/Silver%20Layer%20Transformation.ipynb).
 * Applied:
     - Schema enforcement
     - Null checks and data type conversions
