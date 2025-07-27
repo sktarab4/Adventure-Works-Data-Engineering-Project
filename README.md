@@ -1,12 +1,12 @@
 # adventure-works-end-to-end-pipeline
 
-This project implements a modern data lakehouse on Azure, ingesting data via Data Factory, storing it in ADLS Gen2, transforming it with Databricks, querying it using Synapse, and visualizing insights in Power BI. It demonstrates a scalable, end-to-end pipeline for efficient data processing and analytics.
+This project implements a modern data lakehouse on Azure, ingesting data via **Data Factory**, storing it in **Azure Data Lake Storage Gen2**, transforming it with **Databricks**, querying it using **Synapse**, and visualizing insights in **Power BI**. It demonstrates a scalable, end-to-end pipeline for efficient data processing and analytics.
 
 ## High-Level Overview
 
 This is an end-to-end data pipeline using Microsoft Azure services with a lakehouse approach. Data from Kaggle's Adventure Works dataset is uploaded to GitHub, then ingested into Azure Data Lake Storage Gen2 using Azure Data Factory and transformed using Azure Databricks. The transformed data is then made queryable via Azure Synapse Analytics, and finally visualized using Power BI.
 
-The architecture follows a medallion architecture with three layers:
+The architecture follows a **medallion architecture** with three layers:
 
 * Bronze: Raw, ingested data
 * Silver: Cleaned and transformed data
@@ -35,10 +35,10 @@ The architecture follows a medallion architecture with three layers:
 
 * Organized the ADLS Gen2 structure as:
 ```
-/bronze/
+_/bronze/
     ├── customers/
     ├── products/
-    └── sales/
+    └── sales/_
 ```    
 * No transformations were done in this layer, it was purely for storing ingested raw files.
 
@@ -64,10 +64,10 @@ spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account>.dfs.co
     - Join operations and basic aggregations
 * Wrote the clean data to the ```/silver/``` layer (folder in ADLS Gen2) in Parquet format:
 ```
-/silver/
+_/silver/
     ├── customers_cleaned/
     ├── products_enriched/
-    └── sales_transformed/
+    └── sales_transformed/_
 ```
 
 ### 6: Analytics Layer with Azure Synapse SQL Serverless
